@@ -27,7 +27,7 @@
     
     [self.view addSubview:redVc.view];
     
-    redVc.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height / 2);
+//    redVc.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height / 2);
     
     [redVc didMoveToParentViewController:self];
     
@@ -37,7 +37,20 @@
     
     [self.view addSubview:blueVc.view];
     
-    blueVc.view.frame = CGRectMake(0, self.view.frame.size.height / 2, self.view.frame.size.width, self.view.frame.size.height / 2);
+//    blueVc.view.frame = CGRectMake(0, self.view.frame.size.height / 2, self.view.frame.size.width, self.view.frame.size.height / 2);
+    
+    redVc.view.translatesAutoresizingMaskIntoConstraints = false;
+    blueVc.view.translatesAutoresizingMaskIntoConstraints = false;
+    
+    [redVc.view.widthAnchor constraintEqualToAnchor:self.view.widthAnchor multiplier: 1].active = YES;
+    [redVc.view.heightAnchor constraintEqualToAnchor:self.view.heightAnchor multiplier: 0.5].active = YES;
+    [redVc.view.topAnchor constraintEqualToAnchor:self.view.topAnchor].active = YES;
+    [redVc.view.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor].active = YES;
+    
+    [blueVc.view.widthAnchor constraintEqualToAnchor:self.view.widthAnchor multiplier: 1].active = YES;
+    [blueVc.view.heightAnchor constraintEqualToAnchor:self.view.heightAnchor multiplier: 0.5].active = YES;
+    [blueVc.view.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor].active = YES;
+    [blueVc.view.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor].active = YES;
     
     [blueVc didMoveToParentViewController:self];
     

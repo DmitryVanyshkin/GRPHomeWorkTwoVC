@@ -19,7 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    [self.tabBar setTranslucent:NO];
+    [self.tabBar setTranslucent:NO];
     
     HorizontalViewController* horizontal = [[HorizontalViewController alloc] init];
     horizontal.tabBarItem.title = @"Horizontal";

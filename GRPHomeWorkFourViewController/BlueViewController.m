@@ -28,8 +28,8 @@
     
     imageView.contentMode = UIViewContentModeScaleAspectFit;
     
-    [imageView.widthAnchor constraintEqualToConstant:self.view.frame.size.height / 2].active = YES;
-    [imageView.heightAnchor constraintEqualToConstant:self.view.frame.size.width / 2].active = YES;
+    [imageView.widthAnchor constraintEqualToAnchor:self.view.widthAnchor multiplier:0.5].active = YES;
+    [imageView.heightAnchor constraintEqualToAnchor:self.view.heightAnchor multiplier:0.5].active = YES;
     [imageView.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor].active = YES;
     [imageView.centerYAnchor constraintEqualToAnchor:self.view.centerYAnchor].active = YES;
     
